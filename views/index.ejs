@@ -31,11 +31,12 @@
             </tr>
         </thead>
         <tbody>
-            <% shortUrl.forEach(shortUrl => { %>
+    <!-- Looping through each shortUrl and passing values from model-->
+            <% shortUrls.forEach(shortUrl => { %>
                 <tr>
-                    <td><a href="<% shortUrl.full %>"><% shortUrl.full %></a></td>
-                    <td><a href="<% shortUrl.short %>"><% shortUrl.short %></a></td>
-                    <td><% shortUrl.clicks %>"</td>
+                    <td><a href="<%= shortUrl.full %>"><%= shortUrl.full %></a></td>
+                    <td><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></td>
+                    <td><%= shortUrl.clicks %></td>
                 </tr>
             <%  })  %>
         </tbody>
